@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tester</title>
+  <link rel="stylesheet" href="jui/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="jui/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $("#accordion").accordion();
+    });
+  </script>
+
+</head>
+
+<body>
+
+
+  <script>
+    function setElement(sel, elem) {
+      var img = document.getElementById(elem);
+      img.src = sel.value;
+    }
+  </script>
+
+
+  <script>
+    function openTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+  </script>
+  <script>
+    $('.hover').mouseover(function() {
+      $('.text').css("visibility", "visible");
+    });
+
+    $('.hover').mouseout(function() {
+      $('.text').css("visibility", "hidden");
+    });
+  </script>
+
+  <div id="wrapper">
+
+    <div id="header">
+      <img id="logo" src="img/Logo.png" />
+    </div>
+
+    <div id="nav">
+
+
+      <ul>
+        <li><a href="#about" class="hvr-fade hvr-underline-from-center" onclick="openTab('About')">ABOUT</a></li>
+        <li><a href="#effects" class="hvr-fade hvr-underline-from-center" onclick="openTab('Effects')">EFFECTS</a></li>
+        <li><a href="#faq" class="hvr-fade hvr-underline-from-center" onclick="openTab('Faq')">FAQ</a></li>
+        <li><a href="#customizer" class="hvr-fade hvr-underline-from-center" onclick="openTab('Customizer')">CUSTOMIZER</a></li>
+        <li><a href="#contact" class="hvr-fade hvr-underline-from-center" onclick="openTab('Contact')">CONTACT</a></li>
+      </ul>
+    </div>
+    <div id="About" class="tab">
+      <p>About tab</p>
+    </div>
+
+    <div id="Effects" class="tab" style="display:none">
+      <div id="Flexwrapper">
+        <div class="element"><a href="#"><img src="img/Fuzz.png"/></a>
+          <p href="#" class="hovering">SuperFuzz</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Sunn.png"/></a>
+          <p href="#" class="hovering">Sunn Model T Preamp</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Face.png"/></a>
+          <p href="#" class="hovering">Boss HM-2</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Camo.png"/></a>
+          <p href="#" class="hovering">Screamer</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Hair.png"/></a>
+          <p href="#" class="hovering">Bass Rat</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Splatter.png"/></a>
+          <p href="#" class="hovering">Rat</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Skull.png"/></a>
+          <p href="#" class="hovering">Civil War Muff</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Faq" class="tab" style="display:none">
+      <p>FAQ</p>
+
+    </div>
+
+    <div id="Contact" class="tab" style="display:none">
+      <p>Email Address</p>
+    </div>
+
+    <div id="Customizer" class="tab" style="display:none">
+      <div id="accordion">
+        <h3>Effect Type</h3>
+        <div>
+          <select id="boxtype" onchange="setElement(this, 'boxbare')">
+            <option value="Null.png">Pick a box</option>
+            <option value="img/BoxBare.png">125B</option>
+          </select>
+        </div>
+
+        <h3>Choose Graphics</h3>
+        <div>
+          <select id="graphtype" onchange="setElement(this, 'graphics')">
+            <option value="Null.png">Pick a graphic</option>
+            <option value="img/DryBrush.png">Dry Brushes</option>
+            <option value="img/Fuzzzz.png">Fuzzzz</option>
+          </select>
+        </div>
+
+        <h3>Select Knobs</h3>
+        <div>
+          <select id="knobstype" onchange="setElement(this, 'knobs')">
+            <option value="Null.png">Pick some knobs</option>
+            <option value="img/MXRKnobs6.png">MXR Knobs</option>
+            <option value="img/SlimKnobs6.png">Slim Knobs</option>
+          </select>
+        </div>
+
+        <h3>Mods</h3>
+        <div>
+          <select id="colour" onChange="swapImage()">
+            <option value="Sunn.png">Stock</option>
+            <option value="Fuzz.png">Diodes clipping mod</option>
+          </select>
+        </div>
+      </div>
+      <div id="showcase">
+        <img id="boxbare" src="Null.png" />
+        <img id="knobs" src="Null.png" />
+        <img id="graphics" src="Null.png" />
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+</body>
+
+</html>
