@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Smasher Effects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <!-- <link rel="stylesheet" href="materialize.css"> -->
+</head>
+
+<body>
+
+
+  <div id="wrapper">
+
+    <div id="header">
+    
+    </div>
+
+    <div id="nav" class="nav">
+      <ul>
+        <!--  <li><a href="#about" class="hvr-fade hvr-underline-from-center" onclick="openTab('About')">ABOUT</a></li> -->
+        <li><a href="#effects" class="hvr-fade hvr-underline-from-center" onclick="openTab('Effects')">EFFECTS</a></li>
+        <li><a href="#faq" class="hvr-fade hvr-underline-from-center" onclick="openTab('Faq')">FAQ</a></li>
+        <li><a href="#customizer" class="hvr-fade hvr-underline-from-center" onclick="openTab('Customizer')">CUSTOMIZER</a></li>
+        <li><a href="#contact" class="hvr-fade hvr-underline-from-center" onclick="openTab('Contact')">CONTACT</a></li>
+      </ul>
+    </div>
+    <!--  <div id="About" class="tab" style="display:none">
+      <p>About tab</p>
+    </div> -->
+    <!-- CAREFULL ABOUT style="display:none" WHEN MOVING TABS AROUND-->
+
+    <div id="Effects" class="tab">
+
+      <div class="Flexwrapper">
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Super Fuzz</h4>
+            <p>Play like Electric Wizard</p>
+          </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <h4>SunnT Preamp</h4>
+            <p>The lowest low-end</p>
+          </div>
+        </div>
+
+        <div class="element"><a class="modal-trigger" href="#modal1"><img src="img/Fuzz.png"/></a>
+          <p href="#" class="hovering">SuperFuzz</p>
+        </div>
+        <div class="element"><a class="modal-trigger" href="#modal2"><img src="img/Sunn.png"/></a>
+          <p href="#" class="hovering">Sunn Model T Preamp</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Face.png"/></a>
+          <p href="#" class="hovering">Boss HM-2</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Camo.png"/></a>
+          <p href="#" class="hovering">Screamer</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Hair.png"/></a>
+          <p href="#" class="hovering">Bass Rat</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Splatter.png"/></a>
+          <p href="#" class="hovering">Rat</p>
+        </div>
+        <div class="element"><a href="#"><img src="img/Skull.png"/></a>
+          <p href="#" class="hovering">Civil War Muff</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Faq" class="tab" style="display:none">
+      <h2>Modal Example</h2>
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn">Open Modal</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="Contact" class="tab" style="display:none">
+      <p>Email Address</p>
+    </div>
+
+    <div id="Customizer" class="tab" style="display:none">
+      <div id="sidenav">
+        <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        Effect Type
+      </div>
+      <div class="collapsible-body">
+        <p>Super Fuzz</p>
+        <p>Sunn T</p>
+        <p>HM-2</p>
+        <p>Bass rat</p>
+        <p>Guitar Rat</p>
+        <p>OCD</p>
+        <p>Tube Screamer</p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+        Graphic
+      </div>
+      <div class="collapsible-body">
+        <div class="Flexwrapper">
+        <img src="img/Face.png" class="previewimg">
+        <img src="img/Face.png" class="previewimg">
+        <img src="img/Face.png" class="previewimg">
+        <img src="img/Face.png" class="previewimg">
+        <img src="img/Face.png" class="previewimg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+        Knobs
+      </div>
+      <div class="collapsible-body">
+        <p>Boss</p>
+        <p>Mini Boss</p>
+        <p>Slim</p>
+        <p>MXR</p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+        Mods
+      </div>
+      <div class="collapsible-body">
+        <p>Stock</p>
+        <p>Diodes clipping</p>
+      </div>
+    </li>
+  </ul>
+</div>
+  </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        inDuration: 300, // Transition in duration
+        outDuration: 200, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%', // Ending top style attribute
+
+      });
+    });
+  </script>
+
+  <script>
+    function openTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+
+    $('.hover').mouseover(function() {
+      $('.text').css("visibility", "visible");
+    });
+
+    $('.hover').mouseout(function() {
+      $('.text').css("visibility", "hidden");
+    });
+  </script>
+  <script>
+  $( document ).ready(function() {
+     $('.collapsible').collapsible();
+   });
+ </script>
+
+</body>
+
+</html>
