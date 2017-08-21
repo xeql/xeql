@@ -71,6 +71,23 @@ body {
   width: 250px;
 }
 
+.yt {
+  display: block;
+  float: right;
+  margin-left: 15%;
+  background: black;
+
+}
+.yt iframe {
+  width: 480px;
+  height: 270px;
+}
+.modcont {
+  width: 50%;
+  background: red;
+  float: left;
+}
+
 .previewimg {
   display: block;
   width: 85px;
@@ -210,6 +227,7 @@ li a:hover {
   padding: 0;
   max-height: 70%;
   width: 75%;
+  max-width: 1000px;
   height: 100%;
   margin: auto;
   margin-top: 100px;
