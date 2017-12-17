@@ -1,311 +1,59 @@
 body {
-  background-image: url("img/background.png");
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
+    margin: 0
 }
 
 #header {
-  background-image: url("img/Logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  max-width: 750px;
-  height: 88px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-#logo {
-
-
-  margin: auto;
-  width: 504px;
-  height: 88px;
+    background-image: url("images/Logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 125px;
+    margin: auto;
 }
 
 #nav {
-  /*background-color: #ffffff;*/
-  background-image: url('img/navbg.png');
-  background-position: center;
-  display: flex;
-  margin: auto;
-  max-width: 750px;
-  height: 62px;
-  /*border-bottom: 1px solid #8c8c8c;
-  border-top: 1px solid #8c8c8c;*/
-  margin-bottom: 25px;
+    display: flex;
+    margin: auto;
+    height: 35px;
+    border-top: 1px solid #d8d8d8;
+    margin-bottom: 30px;
+    font: 15px Georgia, serif;
 }
 
-#wrapper {
-  margin: auto;
-  max-width: 750px;
+
+.nav a:hover {
+    color: orange;
 }
 
-#Contact {
-  max-width: 750px;
-  position: relative;
+.nav ul {
+    list-style-type: none;
+    margin: auto;
+    height: 60px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
-#Effects {
-  max-width: 750px;
-}
-
-#Faq {
-  max-width: 750px;
-}
-
-#Customizer {
-  max-width: 750px;
-}
-
-.Flexwrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#sidenav {
-
-  width: 250px;
-}
-
-.yt {
-  display: block;
-  float: right;
-  margin-left: 15%;
-  background: black;
-
-}
-.yt iframe {
-  width: 480px;
-  height: 270px;
-}
-.modcont {
-  width: 50%;
-  background: red;
-  float: left;
-}
-
-.previewimg {
-  display: block;
-  width: 85px;
-  height: 85px;
-  object-fit: cover;
-  border-style: solid;
-  border-width: 1px;
-  margin-bottom: 10px;
-}
-
-.element img {
-  display: block;
-  width: 170px;
-  height: 319px;
-}
-
-.element .hovering {
-  opacity: 0;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  padding: 20px 0px;
-  color: #ffffff;
-  background: #000000;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-}
-
-.element:hover .hovering {
-  opacity: 0.8;
-}
-
-.element {
-  width: 170px;
-  height: 319px;
-  position: relative;
-}
-
-.nav ul{
-  list-style-type: none;
-  margin: auto;
-  height: 60px;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-.nav li{
-  float: left;
+.nav li {
+    float: left;
 }
 
 .nav li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 21px 16px;
-  text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 21px 16px;
+    text-decoration: none;
 }
 
-
-/*  NOT NEEDED ANYMORE WITH HOVER
-    Change the link color to #111 (black) on hover
-
-li a:hover {
-  background-color: #e0e0e0;
+#content {
+    background: url("images/bg5.png") top repeat-x, url("images/bg2.png") bottom repeat-x, url("images/bg3.jpg");
+    width: 100%;
 }
 
-*/
-
-
-/* Fade */
-
-.hvr-fade {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  overflow: hidden;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-property: color, background-color;
-  transition-property: color, background-color;
-}
-
-.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #9e9e9e;
-  color: white;
-}
-
-
-/* Underline From Center */
-
-.hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  overflow: hidden;
-}
-
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: #707070;
-  height: 4px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: #fafafa;
-  padding: 0;
-  max-height: 70%;
-  width: 75%;
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
-  margin-top: 100px;
-  overflow-y: auto;
-  border-radius: 2px;
-  will-change: top, opacity;
-}
-
-@media only screen and (max-width: 992px) {
-  .modal {
-    width: 80%;
-  }
-}
-
-.modal h1, .modal h2, .modal h3, .modal h4 {
-  margin-top: 0;
-}
-
-.modal .modal-content {
-  padding: 24px;
-}
-
-.modal .modal-close {
-  cursor: pointer;
-}
-
-.modal .modal-footer {
-  border-radius: 0 0 2px 2px;
-  background-color: #fafafa;
-  padding: 4px 6px;
-  height: 56px;
-  width: 100%;
-  text-align: right;
-}
-
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
-  margin: 6px 0;
-}
-
-.modal-overlay {
-  position: fixed;
-  z-index: 999;
-  top: -25%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 125%;
-  width: 100%;
-  background: #000;
-  display: none;
-  will-change: opacity;
-}
-
-.modal.modal-fixed-footer {
-  padding: 0;
-  height: 70%;
-}
-
-.modal.modal-fixed-footer .modal-content {
-  position: absolute;
-  height: calc(100% - 56px);
-  max-height: 100%;
-  width: 100%;
-  overflow-y: auto;
-}
-
-.modal.modal-fixed-footer .modal-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: 0;
-}
-
-.modal.bottom-sheet {
-  top: auto;
-  bottom: -100%;
-  margin: 0;
-  width: 100%;
-  max-height: 45%;
-  border-radius: 0;
-  will-change: bottom, opacity;
+#footer {
+    height: 100px;
+    text-align: center;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: lightgray;
 }
