@@ -1,5 +1,14 @@
+/*html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+} */
+
 body {
-    margin: 0
+    margin: 0;
+
 }
 
 #header {
@@ -45,14 +54,47 @@ body {
     text-decoration: none;
 }
 
-#content {
+#display {
     background: url("images/bg5.png") top repeat-x, url("images/bg2.png") bottom repeat-x, url("images/bg3.jpg");
     height: 500px;
     width: 100%;
 }
 
+#bandeau {
+    height: auto;
+}
+
+.bflex {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  padding: 5px;
+  width: auto;
+  height: 200px;
+  margin: 10px 5px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.flex-item img {
+    max-height: 200px;
+}
+
 #footer {
-    height: 100px;
+    height: 1000px;
     text-align: center;
     border-top-style: solid;
     border-top-width: 1px;
