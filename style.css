@@ -47,7 +47,7 @@ body {
 
 #content {
     background: url("images/bg5.png") top repeat-x, url("images/bg2.png") bottom repeat-x, url("images/bg3.jpg");
-    height: 1500px;
+    height: 500px;
     width: 100%;
 }
 
