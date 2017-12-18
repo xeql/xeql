@@ -22,10 +22,26 @@ body {
 #nav {
     display: flex;
     margin: auto;
-    height: 35px;
+    height: 65px;
     border-top: 1px solid #d8d8d8;
-    margin-bottom: 30px;
-    font: 15px Georgia, serif;
+	/*-webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;*/
+    
+}
+
+#nav.fixed {
+    background-image: url("images/Logo.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    background-color: #FFFFFF;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*-webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;*/
+    z-index: 99;
 }
 
 

@@ -27,8 +27,8 @@
     <div id="nav" class="nav">
         <ul>
             <li><a href="#effects" class="hvr-fade hvr-underline-from-center" onclick="openTab('Effects')">EFFECTS</a></li>
-            <li><a href="#faq" class="hvr-fade hvr-underline-from-center" onclick="openTab('Faq')">FAQ</a></li>
-            <li><a href="#order" class="hvr-fade hvr-underline-from-center" onclick="openTab('Order')">ORDER</a></li>
+            <li><a href="#order" class="hvr-fade hvr-underline-from-center" onclick="openTab('Faq')">ORDER</a></li>
+            <li><a href="#faq" class="hvr-fade hvr-underline-from-center" onclick="openTab('Order')">FAQ</a></li>
             <li><a href="#contact" class="hvr-fade hvr-underline-from-center" onclick="openTab('Contact')">CONTACT</a></li>
         </ul>
     </div>
@@ -67,7 +67,17 @@
     <div id="footer">
         <br>something something
     </div>
+<script>var stickyNavTop = $('#nav').offset().top;
 
+$(window).scroll(function() {  
+    if ($(window).scrollTop() > stickyNavTop) {
+        $('#nav').addClass('fixed');
+    }
+    else {
+        $('#nav').removeClass('fixed');
+    }  
+});</script>
+    
 </body>
 
 </html>
