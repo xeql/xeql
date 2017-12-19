@@ -8,16 +8,37 @@
 
 body {
     margin: 0;
+    width: 100%
+}
+
+.header {
+    text-align: center;
+    height: 50%;
+}
+
+    .Container:before
+    {
+        content: '';
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
 }
 
-#header {
-    background-image: url("images/Logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 125px;
-    margin: auto;
+.headerimg
+{
+    display: inline-block;
+    vertical-align: middle;
+    
 }
+
+.headerimg img {
+    width: 100%;
+    max-width: 504px;
+}
+    
+
 
 #nav {
     display: flex;
@@ -110,7 +131,7 @@ body {
 }
 
 #footer {
-    height: 100px;
+    height: 400px;
     text-align: center;
     border-top-style: solid;
     border-top-width: 1px;
